@@ -1,0 +1,32 @@
+<html ng-app="onveraplustard">
+	<head>
+		<meta charset="utf-8" />
+		<title>On vera plus tard !!!!</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/onveraplustard.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- Application file !-->
+		<script type="text/javascript" src="js/app.js"></script>
+		<!-- Autentification !-->
+		<script type="text/javascript" src="js/autent/services/autent.js"></script>
+		<script type="text/javascript" src="js/autent/controller/autentCtrl.js"></script>
+	</head>
+	<body ng-controller="autentCtrl">
+		<h1>On vera plus tard</h1>
+		<div ng-if="userInformation.autent">
+			Bite
+		</div>
+		<div ng-if="!userInformation.autent" class="container">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<h2>Login</h2>
+				<input class="form-control margin-top" ng-model="login" type="text">
+				<input class="form-control margin-top" ng-model="mdp" type="password">
+				<button class="btn btn-success margin-top" ng-click="autentification(login, mdp)">Valider</button>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+	</body>
+</html>
