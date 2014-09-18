@@ -42,6 +42,11 @@ router.route('/login/:user/:password')
 		res.json({'message': req.params.user + ',' + req.params.password});
 	});
 
+router.route('/newUser/:user/:password')
+	.get(function(req, res) {
+		users.addNewUser(esClient, req.params.user, req.params.password, res);
+	});
+
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
