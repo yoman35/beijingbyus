@@ -12,7 +12,6 @@ var elasticsearch = require('elasticsearch');
 var users = require('./modules/users/users.js');
 
 var esClient = new elasticsearch.Client();
-rlg,eizofje,sf,opsejfioesjfopsekfposekfse
 users.init(esClient);
 // configure app to use bodyParser()
 // this will let us get the data from a POST
